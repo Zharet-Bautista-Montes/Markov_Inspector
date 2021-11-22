@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MarkovInspector</class>
+ <widget class="QMainWindow" name="MarkovInspector">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>461</width>
+    <height>502</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MarkovInspector v1.1</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>461</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>442</width>
+       <height>639</height>
+      </rect>
+     </property>
+     <widget class="QGroupBox" name="NetDescription">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>411</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Descripción de la red a estudiar</string>
+      </property>
+      <widget class="QLabel" name="Instructions">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>391</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Por cada nodo, elija su estado fáctico e ingrese los nodos con los que se comunica (valores separados por comas. Ej.: 0,1,2)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 1: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node1">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>60</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors1">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors1">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>60</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 2: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>90</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>90</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>90</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 3: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node3">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>120</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors3">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>120</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors3">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>120</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 4: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node4">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>150</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors4">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>150</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors4">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>150</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 5: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node5">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>180</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors5">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>180</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors5">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>180</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>210</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 6: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node6">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>210</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors6">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>210</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors6">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>210</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>240</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 7: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node7">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>240</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors7">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>240</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors7">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>240</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 8: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node8">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>270</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors8">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>270</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors8">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>270</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>300</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 9: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node9">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>300</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors9">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>300</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors9">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>300</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Node10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>330</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nodo 10: Estado</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Node10">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>330</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Protegido</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Protegido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Susceptible</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comprometido</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Irrecuperable</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Neighbors10">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>330</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Neighbors10">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>330</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Vecinos:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pps</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>391</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Asigne las probabilidades de la cadena de Markov aquí: </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Psc">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Psp</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Pps">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Pcp">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Pci">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Psp">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>40</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Psc</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>40</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pcp</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="NetNodes">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>80</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Número de nodos de la red:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>40</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pci</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SaveConfig">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>80</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Guardar Configuración</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CleanConfig">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>80</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Inspect_T">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>500</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Revisar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>530</y>
+        <width>72</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Irrecuperable</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="Cshare">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>550</y>
+        <width>72</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="smallDecimalPoint">
+       <bool>false</bool>
+      </property>
+      <property name="digitCount">
+       <number>6</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Dec</enum>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="value" stdset="0">
+       <double>0.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="Sshare">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>550</y>
+        <width>72</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="smallDecimalPoint">
+       <bool>false</bool>
+      </property>
+      <property name="digitCount">
+       <number>6</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Dec</enum>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="value" stdset="0">
+       <double>0.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="Ishare">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>550</y>
+        <width>72</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="smallDecimalPoint">
+       <bool>false</bool>
+      </property>
+      <property name="digitCount">
+       <number>6</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Dec</enum>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="value" stdset="0">
+       <double>0.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>530</y>
+        <width>72</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Comprometido</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="Pshare">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>550</y>
+        <width>72</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="smallDecimalPoint">
+       <bool>false</bool>
+      </property>
+      <property name="digitCount">
+       <number>6</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Dec</enum>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="value" stdset="0">
+       <double>0.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>500</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver distribución en el momento t =</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>530</y>
+        <width>72</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Protegido</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Specify_T">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>500</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>530</y>
+        <width>72</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Susceptible</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PaintStudyNet">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>590</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Visualizar 
+Red Configurada</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SpanBehavior">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>590</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="text">
+       <string>Analizar Comportamiento
+ de la Infección</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SpotCriticalNodes">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>590</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="text">
+       <string>Identificar 
+Nodos Críticos</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
