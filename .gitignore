@@ -2,6 +2,7 @@
 *
 
 # Except for these directories:
+!*/venv/
 !*/venv/core/*
 !.gitignore
 !README.md
